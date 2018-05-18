@@ -7,6 +7,7 @@ For all the codes I use this template so refer to this while understanding the c
 /**
 	* Author   : Rohit Kumar Kerketta
 **/
+```
 #include <bits/stdc++.h>
 using namespace std;
 typedef unsigned long long ull;
@@ -115,4 +116,4 @@ template <typename T> inline void pfArr(T vec){ int i; For1(i,0,vec.size()) cout
 ll max(ll m,ll n){	return (m>n)?m:n;}
 ll min(ll m,ll n){	return (m<n)?m:n;}
 /**>>>>>>>>>>>>>>>>>>> END <<<<<<<<<<<<<<<<<<**/
-
+```

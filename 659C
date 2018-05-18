@@ -1,0 +1,30 @@
+//Please find all the defined macros inside the readme.md file. Thank you.
+int main(){
+	int n,m,i,j,t;
+	s2(n,m);
+	MLLLL mp;
+	MLLLL ans;
+	ll cost = 0;
+	For1e1(i,1,n){
+		cin>>t;
+		mp[t] = 1;
+	}
+	ll k = 1;
+//	map<ll,ll>::iterator it;
+//	for(it = mp.begin();it!=mp.end();it++)
+//			cout<<it->F<<" ";
+	while(cost<=m && k<=1e9){
+		if(!mp[k] && cost+k<=m){
+			cost += k;
+			ans[k] = 1;
+		}else if(!mp[k] && cost+k>m)
+			break;
+		k++;
+	}
+	
+	map<ll,ll>::iterator it;
+	pf(ans.size())<<nl;
+	for(it = ans.begin();it!=ans.end();it++)
+		cout<<it->F<<" ";
+	return 0;
+}

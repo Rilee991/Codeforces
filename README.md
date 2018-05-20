@@ -1,11 +1,12 @@
 # Codeforces
 Some questions answers of Codeforces. Hope it helps. Thank You.
 
-*EDIT*
 For all the codes I use this template so refer to this while understanding the code. Thank You.
 ----------------------------------------------------------------------------------------------------
 /**
-	* Author   : Rohit Kumar Kerketta
+
+* Author   : Rohit Kumar Kerketta
+
 **/
 ```
 #include <bits/stdc++.h>

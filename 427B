@@ -1,0 +1,22 @@
+int main(){
+	int n,t,c,i;
+	s3(n,t,c);
+	VLL arr(n);
+	For1(i,0,n){
+		cin>>arr[i];
+	}
+	ll ans = 0;
+	VLL pref(n,0);
+	pref[0] = ((arr[0]>t)?0:1);
+	For1(i,1,n){
+		pref[i] = pref[i-1] + (arr[i]>t?0:1);
+	}
+	//pfArr(pref);
+	if(pref[c-1]==c)
+		ans++;
+	For1(i,c,n){
+		ans += (pref[i]-pref[i-c]==c)?1:0;
+	}
+	pf(ans);
+	return 0;
+}

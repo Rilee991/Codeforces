@@ -1,0 +1,39 @@
+vector<ll> arr[1000000+1];
+int main(){
+	int m;
+	s1(m);
+	int i = 4;
+	arr[0].pb(0);
+	arr[0].pb(1);
+	arr[0].pb(2);
+	arr[0].pb(3);
+	while(i){
+		//pfs("For i:");
+		//cout<<i<<nl;
+		ll ans = 0;
+		ll five = 5;
+		ll rem = i/five;
+		ans += rem;
+		//pf(rem)<<" ";
+		while(rem){
+			five = five*5;
+			rem = i/five;
+			//pfs("W");
+			//pf(rem)<<" ";
+			ans += rem;
+		}
+		//cout<<nl;
+		arr[ans].pb(i);
+		if(ans>m){
+			break;
+		}
+		i++;
+	}
+	pf(arr[m].size());
+	if(arr[m].size()){
+		cout<<nl;
+		for(int j=0;j<arr[m].size();j++)
+			cout<<arr[m][j]<<" ";
+	}
+	return 0;
+}

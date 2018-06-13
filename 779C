@@ -1,0 +1,25 @@
+int main(){
+	int n,i,j,xo,yo,x,y;
+	s3(n,xo,yo);
+	vector<pair<ll,ll> > arr(n);
+	For1(i,0,n){
+		s2(x,y);
+		arr[i] = MP(x,y);
+	}
+	MDLL mp;
+	For1(i,0,n){
+		double m = 0.0;
+		ll ydiff = arr[i].S - yo;
+		ll xdiff = arr[i].F - xo;
+		if(ydiff==0){
+			mp[0] = 1;
+		}else if(xdiff==0){
+			mp[100000] = 1;
+		}else{
+			m = (1.0*ydiff)/xdiff;
+			mp[m] = 1;
+		}
+	}
+	pf(mp.size());
+	return 0;
+}

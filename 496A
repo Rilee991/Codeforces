@@ -1,0 +1,26 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cerr.tie(NULL);
+	int n,i;
+	s1(n);
+	int x;
+	int stairways = 0;
+	int currStairs = 0;
+	VLL res;
+	For1(i,0,n){
+		s1(x);
+		currStairs++;
+		if(x==1 && stairways==0){
+			stairways++;
+		}else if(x==1){
+			stairways++;
+			res.pb(currStairs-1);
+			currStairs = 1;
+		}
+	}
+	res.pb(currStairs);
+	pf(stairways)<<"\n";
+	pfArr(res);
+	return 0;
+}

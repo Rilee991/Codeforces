@@ -1,0 +1,46 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cerr.tie(NULL);
+	int i;
+	VLL power(35,0);
+	power[0] = 1;
+	power[1] = 2;
+	For1(i,2,35){
+		power[i] = power[i-1]*2;
+	}
+	int n,x;
+	s1(n);
+	map<ll,ll> mp;
+	mp.clear();
+	For1(i,0,n){
+	    s1(x);
+	    mp[x]++;
+	}
+	map<ll,ll>::iterator it;
+	//pfMap(mp);
+	ll ans = 0;
+	ForMap(it,mp){
+	    ll lowlim = ceil(log2(it->F));
+	    //pf(power[lowlim])<<" ";
+		bool present = false;
+	    For1(i,lowlim,35){
+	        ll diff = power[i]-it->F;
+			if(diff==it->F){
+				if(mp[diff]>1){
+		            present = true;
+		            break;
+		        }
+		    }else{
+		    	if(mp[diff]>=1){
+		            present = true;
+		            break;
+		        }
+		    }
+	    }
+	    if(!present)
+	        ans+=it->S;
+	}
+	pf(ans);
+	return 0;
+}

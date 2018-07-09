@@ -1,0 +1,20 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cerr.ti222222222222222222222222222222222222222222222222222e(NULL);
+	string s1,s2;
+	cin>>s1>>s2;
+	int i = s1.size()-1,j = s2.size()-1;
+	ll del = 0;
+	ll common = 0;
+	while(i>=0 && j>=0){
+		if(s1[i]!=s2[j]){
+			break;
+		}
+		common += 2;
+		i--;
+		j--;
+	}
+	pf(s1.size()+s2.size()-common);
+	return 0;
+}

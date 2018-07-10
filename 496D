@@ -1,0 +1,38 @@
+int main(){
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+	cerr.tie(NULL);
+	int i;
+	string s;
+	cin>>s;
+	VLL arr(s.size());
+	For1(i,0,s.size()){
+		int x = s[i]-'0';
+		arr[i] = x%3;
+	}
+	ll ans = 0;
+	//111; 21; 12; 0; 222;
+	i = 0;
+	while(i<s.size()){
+		if(arr[i]==0){
+			ans++;
+			i++;
+		}else if(arr[i]==1 && arr[i+1]==2){
+			ans++;
+			i += 2;
+		}else if(arr[i]==1 && arr[i+1]==1 && arr[i+2]==1){
+			ans++;
+			i += 3;
+		}else if(arr[i]==2 && arr[i+1]==1){
+			ans++;
+			i += 2;
+		}else if(arr[i]==2 && arr[i+1]==2 && arr[i+2]==2){
+			ans++;
+			i += 3;
+		}else{
+			i++;
+		}
+	}
+	pf(ans);
+	return 0;
+}
